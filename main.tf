@@ -13,4 +13,45 @@ module "sns" {
 
   name = module.sns_label.id
   tags = module.sns_label.tags
+
+  topic_policy_statements = {
+    default = {
+      actions = [
+        "SNS:GetTopicAttributes",
+        "SNS:SetTopicAttributes",
+        "SNS:AddPermission",
+        "SNS:RemovePermission",
+        "SNS:DeleteTopic",
+        "SNS:Subscribe",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:Publish",
+        "SNS:Receive"
+      ]
+      principals = [
+        {
+          type        = "AWS"
+          identifiers = ["*"]
+        }
+      ]
+      conditions = [
+        {
+          test     = "StringEquals"
+          variable = "AWS:SourceOwner"
+          values   = [module.this.aws_account_id]
+        }
+      ]
+    },
+    sub = {
+      actions = [
+        "sns:Subscribe"
+      ]
+
+      principals = [
+        {
+          type        = "AWS"
+          identifiers = [var.subscription_aws_account_id]
+        }
+      ]
+    }
+  }
 }

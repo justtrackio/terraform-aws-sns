@@ -15,3 +15,8 @@ variable "alarm_enabled" {
   default     = false
   description = "Defines if alarms should be created"
 }
+
+variable "subscription_aws_account_id" {
+  type        = string
+  description = "The AWS account ID for the subscription."
+}
