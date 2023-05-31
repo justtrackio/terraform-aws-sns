@@ -6,7 +6,7 @@ variable "alarm" {
     period              = optional(number, 60)
     threshold           = optional(number, 99)
   })
-  description = ""
+  description = "The details of the alarm such as datapoints to alarm, evaluation periods, backlog minutes, period, and threshold."
   default     = {}
 }
 
