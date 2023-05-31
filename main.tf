@@ -15,7 +15,7 @@ module "sns" {
   tags = module.sns_label.tags
 
   topic_policy_statements = {
-    sub = {
+    subscription = {
       actions = ["sns:Subscribe"]
 
       principals = [
