@@ -16,6 +16,12 @@ variable "alarm_enabled" {
   description = "Defines if alarms should be created"
 }
 
+variable "alarm_topic_arn" {
+  type        = string
+  description = "The ARN of the SNS Topic used for notifying about alarm/ok messages."
+  default     = null
+}
+
 variable "subscription_aws_account_id" {
   type        = string
   description = "The AWS account ID for the subscription."
