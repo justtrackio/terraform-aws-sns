@@ -9,7 +9,7 @@ module "sns_label" {
 
 module "sns" {
   source  = "terraform-aws-modules/sns/aws"
-  version = "5.3.0"
+  version = "6.0.0"
 
   name = module.sns_label.id
   tags = module.sns_label.tags
