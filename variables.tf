@@ -24,5 +24,6 @@ variable "alarm_topic_arn" {
 
 variable "subscription_aws_account_id" {
   type        = string
+  default     = null
   description = "The AWS account ID for the subscription."
 }

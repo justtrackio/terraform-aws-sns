@@ -19,7 +19,7 @@ Terraform module which creates a sns topic
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_sns"></a> [sns](#module\_sns) | terraform-aws-modules/sns/aws | 5.3.0 |
+| <a name="module_sns"></a> [sns](#module\_sns) | terraform-aws-modules/sns/aws | 6.1.0 |
 | <a name="module_sns_label"></a> [sns\_label](#module\_sns\_label) | justtrackio/label/null | 0.26.0 |
 | <a name="module_this"></a> [this](#module\_this) | justtrackio/label/null | 0.26.0 |
 
@@ -55,7 +55,7 @@ Terraform module which creates a sns topic
 | <a name="input_organizational_unit"></a> [organizational\_unit](#input\_organizational\_unit) | Usually used to indicate the AWS organizational unit, e.g. 'prod', 'sdlc' | `string` | `null` | no |
 | <a name="input_regex_replace_chars"></a> [regex\_replace\_chars](#input\_regex\_replace\_chars) | Terraform regular expression (regex) string.<br>Characters matching the regex will be removed from the ID elements.<br>If not set, `"/[^a-zA-Z0-9-]/"` is used to remove all characters other than hyphens, letters and digits. | `string` | `null` | no |
 | <a name="input_stage"></a> [stage](#input\_stage) | ID element. Usually used to indicate role, e.g. 'prod', 'staging', 'source', 'build', 'test', 'deploy', 'release' | `string` | `null` | no |
-| <a name="input_subscription_aws_account_id"></a> [subscription\_aws\_account\_id](#input\_subscription\_aws\_account\_id) | The AWS account ID for the subscription. | `string` | n/a | yes |
+| <a name="input_subscription_aws_account_id"></a> [subscription\_aws\_account\_id](#input\_subscription\_aws\_account\_id) | The AWS account ID for the subscription. | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
 
