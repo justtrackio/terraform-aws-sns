@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/justtrackio/terraform-aws-sns/compare/v1.1.0...v1.2.0) (2024-08-13)
+
+
+### Features
+
+* make topic_policy_statements optional ([#47](https://github.com/justtrackio/terraform-aws-sns/issues/47)) ([b8f1657](https://github.com/justtrackio/terraform-aws-sns/commit/b8f1657ecba89a6291523d96977477e52f77f7a4))
+
 ## [1.1.0](https://github.com/justtrackio/terraform-aws-sns/compare/v1.0.0...v1.1.0) (2023-09-07)
 
 
